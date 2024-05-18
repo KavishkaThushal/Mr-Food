@@ -1,0 +1,90 @@
+.nav-bar{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem  ;
+     
+    margin: 1.3rem  auto 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+    
+}
+
+.logo{
+    width: 68px;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 1.3vw;
+    font-size: 16px;
+    align-items: center;
+    list-style: none;
+    color: #0A4354;
+}
+
+.nav-right{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-right>svg{
+    color: #0A4354;
+    font-size: 18px;
+
+}
+
+.menu-icon{
+    display: none;
+
+}
+
+.nav-right .sign-btn{
+    background-color: transparent;
+    border: 1px solid #0A4354;
+    color: #0A4354;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.nav-right .sign-btn:hover{
+    background-color: rgba(10, 67, 84,0.7);
+    color: white;
+}
+
+.active{
+    border-bottom: 2px solid #0A4354;
+    padding-bottom: 2px;
+}
+
+@media screen and (max-width: 768px){
+    .logo{
+        width: 60px;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .nav-right .sign-btn{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .nav-bar{
+        justify-content: space-between;
+    }
+    
+}
+
+@media screen and (max-width: 430px){
+    .logo{
+        width: 50px;
+        
+    }
+}
