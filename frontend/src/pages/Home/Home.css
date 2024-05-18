@@ -75,40 +75,11 @@
     
 }
 
-@media screen and (max-width: 607px){
-    .video{
-        height: 70%;
-    }
 
-    .hero-content{
-        max-width: 70%;
-        top: 25%;
-        left: 10%;
-    }
-    .hero-content h1{
-        
-        font-size: 2.7rem;
-        font-weight:500;
-    }
-    
-    .hero-content p{
-        color: white;
-        font-size: .5rem;
-        
-        font-weight: 400;
-        
-    }
-    .hero-content .hero-btn{
-        padding: 8px 18px;
-        font-size: .8rem;
- 
-    }
-    
-}
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .video{
-        height: 60%;
+        height: 50%;
     }
 
     .hero-content{
@@ -121,6 +92,10 @@
         font-size: 2rem;
         font-weight:500;
     }
+    .hero-content p{
+        
+        display: none;
+    }
     
     
     .hero-content .hero-btn{
@@ -136,9 +111,9 @@
     
 }
 
-@media screen and (max-width: 430px) and (min-width: 375px){
+@media screen and (max-width: 430px) {
     .video{
-        height: 55%;
+        height: 40%;
     }
 
     .hero-content{
@@ -166,7 +141,7 @@
     }
 }
 
-@media screen and (max-width: 400px){
+/* @media screen and (max-width: 400px){
     .video{
         height: 55%;
     }
@@ -259,4 +234,4 @@
     }
     
     
-}
+} */
