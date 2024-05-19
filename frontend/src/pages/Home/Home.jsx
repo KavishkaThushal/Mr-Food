@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 import Video from '../../assets/video.mp4'
+import MenuExplore from '../../components/MenuExplore/MenuExplore'
+import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
 function Home() {
+  const [category,setCategory] = useState("All")
+
   return (
     <div>
       <div className='header-hero'>
@@ -13,6 +17,9 @@ function Home() {
       </div>
       
       </div>
+      <MenuExplore category={category} setCategory={setCategory}/>
+      <FoodDisplay category={category}/>
+      
     </div>
   )
 }

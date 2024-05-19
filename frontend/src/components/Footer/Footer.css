@@ -1,0 +1,142 @@
+.footer-section{
+    background-color: #0A4354;
+    color: white;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+
+
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem 0 4rem;
+    
+  
+}
+
+.footer-content .footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+ 
+}
+.footer-content .footer-left img{
+    width: 150px;
+    
+ 
+}
+.footer-content .footer-left p{
+    font-size: .9rem;
+    width: 80vh;
+  
+}
+
+.footer-content .footer-center,.footer-right{
+    display: flex;
+    flex-direction: column;
+   
+    gap: .8rem;
+    
+}
+
+.footer-content .footer-center h1,.footer-right h1{
+    font-size: 1.3rem;
+    font-weight: 500;
+    
+
+}
+
+.footer-content .footer-center ul,.footer-right ul{
+    list-style: none;
+    display: flex;
+    font-size: .8rem;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+
+.footer-line{
+    width: 90%;
+    margin: 25px auto;
+}
+
+.footer-copyright{
+    text-align: center;
+    font-size: .8rem;
+    padding-bottom: 1.8rem;
+
+}
+
+.footer-social-icon{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1500px){
+    .footer-content .footer-left p{
+        font-size: .9rem;
+        width: 50vh;
+      
+    }
+}
+@media screen and (max-width: 1040px){
+    .footer-content .footer-left p{
+        font-size: .9rem;
+        width: 40vh;
+      
+    }
+}
+@media screen and (max-width: 768px){
+
+    .footer-content .footer-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 1rem;
+     
+    }
+    .footer-content .footer-left img{
+        width: 100px;
+        
+     
+    }
+
+    .footer-content .footer-left p{
+        display: none;
+      
+    }
+}
+@media screen and (max-width: 600px){
+    .footer-content .footer-center h1,.footer-right h1{
+        font-size: 1rem;
+        font-weight: 500;
+        
+    
+    }
+    .footer-content{
+       
+        padding: 1.5rem 2rem 0 2rem;
+        
+      
+    }
+}
+@media screen and (max-width: 500px){
+    .footer-content .footer-right{
+        display: flex;
+        flex-direction: column;
+       width: 30vh;
+        gap: .8rem;
+        
+    }
+    .footer-content .footer-center{
+        display: none;
+        
+        
+    }
+    
+}

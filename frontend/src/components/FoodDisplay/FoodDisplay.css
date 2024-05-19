@@ -1,0 +1,19 @@
+.fooddisplay-section{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 2.5rem auto;
+}
+.foodDisplay-title h1{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.food-list-display{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin-top: 1.8rem;
+    gap:1.8rem;
+    row-gap: 4rem;
+
+}
