@@ -5,7 +5,7 @@ import { FaFacebook,FaLinkedin  } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 function Footer() {
   return (
-    <div className='footer-section'>
+    <div className='footer-section' id='footer-section'>
     <div className='footer-content'>
         <div className='footer-left'>
            <img src={Logo} alt='logo' className='footer-logo' />

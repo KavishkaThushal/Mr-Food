@@ -1,0 +1,24 @@
+.oath-btn{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    cursor: pointer;
+    color: #0A4354;
+    padding: 10px 25px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+.oath-btn:hover{
+    background: rgba(10, 67, 84,0.3);
+    color: white;
+}
+
+.oath-btn img{
+    width: 20px;
+}

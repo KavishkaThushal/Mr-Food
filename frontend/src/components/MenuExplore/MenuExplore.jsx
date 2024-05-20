@@ -31,7 +31,7 @@ function MenuExplore({category,setCategory}) {
     }
 }
   return (
-    <div className='menu-section'>
+    <div className='menu-section' id='menu-section'>
         <div className='menu-title'>
             <h1>Explore our menu</h1>
             <p>Choose from the diverse menu featuring a delectable array of dishes.Our mission is to satisfy your cravings and elevate your dining experience.One delicious meat at time.</p>

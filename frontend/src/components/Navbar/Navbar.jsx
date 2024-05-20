@@ -2,28 +2,32 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { FiSearch,FiShoppingCart  } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
-function Navbar() {
+import { useNavigate } from 'react-router-dom';
+function Navbar({setSignPopUp}) {
   const [menu,setMenu] = useState('')
   const [menuShow,setMenuShow] = useState(false)
+  const navigate=useNavigate()
+  
   return (
    <div className='nav-bar'>
     <img src={Logo} alt='logo' className='logo' />
 
     <ul className='nav-menu'>
       
-        <li onClick={()=>(setMenu('home'))} className={menu==='home'? 'active':''}>HOME</li>
-        <li onClick={()=>(setMenu('menu'))} className={menu==='menu'? 'active':''}>MENU</li>
-        <li onClick={()=>(setMenu('mobile-app'))} className={menu==='mobile-app'? 'active':''}>MOBILE-APP</li>
-        <li onClick={()=>(setMenu('contact'))} className={menu==='contact'? 'active':''}>CONTACT US</li>
+        <Link to='/' onClick={()=>(setMenu('home'))} className={menu==='home'? 'active':''}>HOME</Link>
+        <a href='#menu-section' onClick={()=>(setMenu('menu'))} className={menu==='menu'? 'active':''}>MENU</a>
+        
+        <a href='#footer-section' onClick={()=>(setMenu('contact'))} className={menu==='contact'? 'active':''}>CONTACT US</a>
       
     </ul>
 
     <div className='nav-right'>
     
      <FiSearch  /> 
-     <FiShoppingCart  /> 
-     <button className='sign-btn'>SIGN IN</button>
+     <FiShoppingCart onClick={()=>(navigate('/cart'))} /> 
+     <button onClick={()=>(setSignPopUp(true))} className='sign-btn'>SIGN IN</button>
      <RxHamburgerMenu className='menu-icon' onClick={()=>(setMenuShow(!menuShow))}/>
     </div>
 
@@ -31,12 +35,12 @@ function Navbar() {
     <ul className='toggle-nav-menu'>
       
       <li onClick={()=>(setMenu('home'))} className={menu==='home'? 'active':''}>HOME</li>
-      <li onClick={()=>(setMenu('menu'))} className={menu==='menu'? 'active':''}>MENU</li>
-      <li onClick={()=>(setMenu('mobile-app'))} className={menu==='mobile-app'? 'active':''}>MOBILE-APP</li>
-      <li onClick={()=>(setMenu('contact'))} className={menu==='contact'? 'active':''}>CONTACT US</li>
+      <a href='#menu-section' onClick={()=>(setMenu('menu'))} className={menu==='menu'? 'active':''}>MENU</a>
+      
+      <a href='#footer-section' onClick={()=>(setMenu('contact'))} className={menu==='contact'? 'active':''}>CONTACT US</a>
     
   </ul>
-  <button className='toggle-sign-btn'>SIGN IN</button>
+  <button onClick={()=>(setSignPopUp(true))} className='toggle-sign-btn'>SIGN IN</button>
 
     </div>:''}
    </div>
