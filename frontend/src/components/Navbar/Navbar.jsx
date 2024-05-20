@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Navbar.css'
 import { FiSearch,FiShoppingCart  } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 import { useNavigate } from 'react-router-dom';
+import { StoreContext } from '../../context/storeContext';
 function Navbar({setSignPopUp}) {
   const [menu,setMenu] = useState('')
   const [menuShow,setMenuShow] = useState(false)
   const navigate=useNavigate()
-  
+  const {cardItems}=useContext(StoreContext)
+  console.log(cardItems);
   return (
    <div className='nav-bar'>
     <img src={Logo} alt='logo' className='logo' />
@@ -27,6 +29,7 @@ function Navbar({setSignPopUp}) {
     
      <FiSearch  /> 
      <FiShoppingCart onClick={()=>(navigate('/cart'))} /> 
+     {Object.values(cardItems).map((value,i)=>(value>0? <div className='notification-dot'/>:null))}
      <button onClick={()=>(setSignPopUp(true))} className='sign-btn'>SIGN IN</button>
      <RxHamburgerMenu className='menu-icon' onClick={()=>(setMenuShow(!menuShow))}/>
     </div>
