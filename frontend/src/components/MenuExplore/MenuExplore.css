@@ -57,3 +57,44 @@
     border-radius: 50%;
     
 }
+
+@media screen and (max-width: 600px) {
+    .menu-section{
+        margin: 45vh auto 2vh auto;
+    }
+    .menu-title p{
+        
+        width: 80%;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .menu-section{
+        margin: 45vh auto 2vh auto;
+    }
+    .menu-title p{
+        
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 360px) {
+    .menu-section{
+        margin: 38vh auto 2vh auto;
+    }
+    .menu-title p{
+        
+        width: 100%;
+    }
+    .menu-card img{
+        width: 5rem;
+        height: 5rem;
+     
+    }
+    .menu-card h1{
+        font-size: 1rem;
+        font-weight: 400;
+       
+    }
+    
+}

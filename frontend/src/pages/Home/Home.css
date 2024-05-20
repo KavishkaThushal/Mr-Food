@@ -141,7 +141,25 @@
     }
 }
 
-/* @media screen and (max-width: 400px){
+@media screen and (max-width: 430px){
+    .video{
+        height: 50%;
+    }
+
+    .hero-content .hero-btn{
+        padding: 8px 18px;
+        font-size: .5rem;
+ 
+    }
+    .hero-content h1{
+        
+        font-size: 1.7rem;
+        font-weight:500;
+    }
+   
+}
+
+/* @media screen and (max-width: 00px){
     .video{
         height: 55%;
     }

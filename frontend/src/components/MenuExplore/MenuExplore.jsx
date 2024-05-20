@@ -9,6 +9,9 @@ function MenuExplore({category,setCategory}) {
     slidesPerView : 1,
     spaceBetween : 10,
     breakpoints : {
+        300:{
+          slidesPerView: 2
+        },
         360:{
           slidesPerView: 2
         },

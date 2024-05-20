@@ -17,3 +17,36 @@
     row-gap: 4rem;
 
 }
+
+@media screen and (max-width: 970px){
+    .food-list-display{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+}
+@media screen and (max-width: 535px){
+    .food-list-display{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+}
+@media screen and (max-width: 430px){
+    .food-list-display{
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap:2.1rem;
+    }
+    
+}
+@media screen and (max-width: 375px){
+    .fooddisplay-section{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 2.5rem auto;
+    }
+    .food-list-display{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap:2.1rem;
+    }
+    
+}
