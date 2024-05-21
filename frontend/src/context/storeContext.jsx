@@ -17,16 +17,28 @@ const [cardItems, setCardItems] = useState({})
 const removeFromCart = (itmeId) => {
     setCardItems(prev=>({...prev,[itmeId]:prev[itmeId]-1}))
 }
-
+const getTotalAmount=()=>{
+    let total=0;
+    for(const cartItem in cardItems){
+        if(cardItems[cartItem]>0){
+            const item=foodList.find((item)=>item._id===cartItem)
+            total+=item.price*cardItems[cartItem]
+        }
+    }
+    return total;
+}
+   
     const contextValue = {
         foodList,
         cardItems,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        getTotalAmount
     }
     
     useEffect(() => {
         console.log(cardItems);
+        
     }, [cardItems])
     return (
         <StoreContext.Provider value={contextValue}>

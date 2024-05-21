@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer'
 import { useState } from 'react'
 import SignPopUp from './components/SignPopUp/SignPopUp'
 import Cart from './pages/Cart/Cart'
+import Order from './pages/Order/Order'
 function App() {
   const [signPopUp,setSignPopUp] = useState(false)
   console.log(signPopUp);
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="/order" element={<Order/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

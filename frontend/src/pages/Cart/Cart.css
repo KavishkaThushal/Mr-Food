@@ -51,3 +51,157 @@
 .cart-content .item-remover:hover{
     color: #f75f5f;
 }
+
+.cart-bottom{
+    display: flex;
+    justify-content: start;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 50%;
+   
+   
+}
+
+.cart-bottom .cart-total{
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    width: 100%;
+}
+
+.cart-total h3{
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.cart-total .cart-content{
+    display: flex;
+    gap: .7rem;
+    flex-direction: column;
+}
+.cart-total .cart-content .cart-total-details{
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.cart-content hr{
+    height: 1px;
+    width: 100%;
+    background: #e2e2e2;
+    border: none;
+}
+.cart-content .cart-checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: rgba(10, 67, 84,0.7);
+    color: white;
+    margin-top: 1rem;
+    
+}
+.cart-content .cart-checkout:hover{
+    background-color: rgba(10, 67, 84,0.9);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 665px) {
+    .cart-section .cart-title{
+        
+        gap: 1rem;
+        row-gap: 1rem;
+        font-size: .7rem;
+        font-weight: 400;
+        color: grey;
+        text-align: center;
+       
+    }
+    .cart-content{
+        
+        row-gap: 1rem;
+        font-size: .6rem;
+        font-weight: 400;
+        color: grey;
+        align-items: center;
+        text-align: center;
+       
+    }
+    .cart-content .item-remover{
+        color: red;
+        cursor: pointer;
+        font-size: .9rem;
+        
+    }
+    .cart-content .cart-checkout{
+       
+      
+        padding: 10px 20px;
+        font-size: 12px;
+        
+    }
+      
+    .cart-total h3{
+        font-size: 1rem;
+        font-weight: 800;
+    } 
+}
+
+@media screen and (max-width:350px){
+    .cart-section{
+        
+        width: 90%;
+       
+    }
+
+    .cart-bottom{
+        
+        width: 70%;
+       
+       
+    }
+}
+@media screen and (max-width:300px){
+    .cart-section{
+        
+        width: 100%;
+        padding: 1rem;
+       
+    }
+
+    .cart-bottom{
+        
+        width: 70%;
+       
+       
+    }
+    .cart-section .cart-title{
+        
+        
+        font-size: .5rem;
+       
+       
+    }
+    .cart-content{
+        
+        row-gap: 1rem;
+        font-size: .5rem;
+       
+       
+    }
+    .cart-content .item-remover{
+        color: red;
+        cursor: pointer;
+        font-size: .9rem;
+        
+    }
+}
+

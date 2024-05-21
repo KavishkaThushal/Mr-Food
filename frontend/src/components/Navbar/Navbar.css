@@ -16,12 +16,12 @@
 }
 .notification-dot{
     position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius:4rem;
     background-color: red;
     top: 30%;
-    right: 10%;
+    right: 9.5%;
 }
 
 .nav-menu{
@@ -105,6 +105,35 @@
     font-size: 15px;
     transition: all 0.3s ease-in-out;
 }
+@media screen and (max-width:1075px) {
+    .notification-dot{
+       
+        top: 30%;
+        right: 12%;
+    }
+}
+@media screen and (max-width:1013px) {
+    .notification-dot{
+       
+        top: 30%;
+        right: 12.5%;
+    }
+}
+@media screen and (max-width:955px) {
+    .notification-dot{
+       
+        top: 30%;
+        right: 13%;
+    }
+}
+@media screen and (max-width:811px) {
+    .notification-dot{
+       
+        top: 30%;
+        right: 16%;
+    }
+}
+
 @media screen and (max-width: 768px){
     .logo{
         width: 60px;
@@ -123,7 +152,20 @@
     .nav-bar{
         justify-content: space-between;
     }
+    .notification-dot{
+       
+        top: 29%;
+        right: 6%;
+    }
     
+}
+
+@media screen and (max-width:600px){
+    .notification-dot{
+       
+        top: 29%;
+        right: 7%;
+    }
 }
 
 @media screen and (max-width: 430px){
@@ -131,4 +173,18 @@
         width: 50px;
         
     }
+    .notification-dot{
+       
+        top: 28%;
+        right: 9.5%;
+    }
+}
+
+@media screen and (max-width: 335px){
+    .notification-dot{
+       
+        top: 28%;
+        right: 12%;
+    }
+    
 }
