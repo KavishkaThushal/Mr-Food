@@ -1,0 +1,97 @@
+.Add-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 5rem auto;
+    gap: 2rem;
+
+}
+
+.Add-container .img-uploader{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.Add-container .img-uploader img{
+    width: max(2%, 100px);
+}
+
+.Add-container .product-name{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 50%;
+    
+}
+.Add-container .product-name input{
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #a9a9a9;
+    outline: none;
+}
+
+.Add-container .text-field{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 50%;
+    
+}
+
+.Add-container .text-field textarea{
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #a9a9a9;
+    outline: none;
+}
+
+.Add-container .last-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.Add-container .last-row .category-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.Add-container .last-row .category-container select{
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #a9a9a9;
+    outline: none;
+    max-width: 160px;
+}
+
+.Add-container .last-row .price-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.Add-container .last-row .price-container input{
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #a9a9a9;
+    outline: none;
+    max-width: 160px;
+}
+
+.Add-container .add-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .7rem 1rem;
+    border-radius: 6px;
+    background-color: #0a4354;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: max(20%, 100px);
+}
+

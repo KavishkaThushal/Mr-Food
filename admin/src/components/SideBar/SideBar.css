@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Major+Mono+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+   width:20%;
+   height: 100vh;
+   border-right: 1px solid #a9a9a9;
+   
+}
+
+.sidebar-container .options{
+    display: flex;
+    flex-direction: column;
+  margin-top: 2rem;
+  gap: 1.6rem;
+}
+
+.sidebar-container .options .option{
+
+   display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7rem 1.5rem;
+    border: 1px solid #a9a9a9;
+    border-right: none;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.sidebar-container .options .option svg{
+    font-size: 1.5rem;
+}
+
+.sidebar-container .options .option h3{
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.sidebar-active{
+
+    background-color: rgba(10, 67, 84,0.7);
+    color: white;
+     
+ }

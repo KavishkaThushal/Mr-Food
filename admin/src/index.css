@@ -21,3 +21,10 @@ hr{
 a{
   text-decoration: none;
 }
+
+.app{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  
+}
