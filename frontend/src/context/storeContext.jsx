@@ -5,6 +5,7 @@ export const StoreContext = createContext(null);
 
 const StoreProvider = (props) => {
 const [cardItems, setCardItems] = useState({})
+const [Token, setToken] = useState('')
   
   const addToCart = (itmeId) => {
     if(!cardItems[itmeId]){
@@ -33,7 +34,9 @@ const getTotalAmount=()=>{
         cardItems,
         addToCart,
         removeFromCart,
-        getTotalAmount
+        getTotalAmount,
+        setToken,
+        Token,
     }
     
     useEffect(() => {

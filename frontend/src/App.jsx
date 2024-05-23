@@ -7,6 +7,9 @@ import { useState } from 'react'
 import SignPopUp from './components/SignPopUp/SignPopUp'
 import Cart from './pages/Cart/Cart'
 import Order from './pages/Order/Order'
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   const [signPopUp,setSignPopUp] = useState(false)
   console.log(signPopUp);
@@ -24,6 +27,7 @@ function App() {
       <Footer />
     </BrowserRouter>
     </StoreProvider>
+    <ToastContainer/> 
     </div>
     
   )
