@@ -9,10 +9,11 @@ import Cart from './pages/Cart/Cart'
 import Order from './pages/Order/Order'
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Verify from './pages/Verify/Verify'
 
 function App() {
   const [signPopUp,setSignPopUp] = useState(false)
-  console.log(signPopUp);
+
   return (
     <div className='app'>
       <StoreProvider>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/order" element={<Order/>} />
+        <Route path="/verify" element={<Verify/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

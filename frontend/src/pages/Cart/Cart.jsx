@@ -50,12 +50,12 @@ function Cart() {
                     <hr/>
                     <span className='cart-total-details'>
                         <p>Delivery fee</p>
-                        <p>Rs.{0}.00</p>
+                        <p>Rs.{200}.00</p>
                     </span>
                     <hr/>
                     <span className='cart-total-details'>
                         <p>Total</p>
-                        <p>Rs.{0}.00</p>
+                        <p>Rs.{subTotal+200}.00</p>
                     </span>
                   
                     <button onClick={()=>(navigate('/order'))} className='cart-checkout'>Checkout</button>
