@@ -15,7 +15,7 @@ const route=express.Router();
 
 route.post('/add',upload.single('image'),addFood)
 route.get('/show-list',showFoodList)
-route.get('/remove-list',removeFoodItem)
+route.post('/remove-list/:id',removeFoodItem)
 
 
 export {route as FoodRoute}

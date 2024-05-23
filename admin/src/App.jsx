@@ -4,6 +4,8 @@ import Order from './Pages/Order/Order'
 import Navbar from './components/Navbar/Navbar'
 import SideBar from './components/SideBar/SideBar'
 import {Routes,Route} from 'react-router-dom'
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
  
 
@@ -19,7 +21,7 @@ function App() {
         <Route path='/order' element={<Order/>}/>
       </Routes>
       </div>
-      
+      <ToastContainer/> 
     </>
   )
 }
