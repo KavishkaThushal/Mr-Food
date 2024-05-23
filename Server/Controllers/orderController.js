@@ -68,3 +68,12 @@ export const verifyOrder=async(req,res)=>{
    }
 
 }
+
+export const showOrders=async(req,res)=>{
+    try {
+        const orders=await Order.find({userId:req.user})
+        res.status(200).json({success:true,data:orders})
+    } catch (error) {
+        res.status(500).json({message:error.message,success:false})
+    }
+}

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import './Verify.css'
 import axios from 'axios'
+import {toast} from 'react-toastify'
 
 function Verify() {
     const [searchParams,setSearchParams]=useSearchParams()
@@ -20,12 +21,15 @@ function Verify() {
                 orderId
             })
             if(response.data.success===true){
+                toast.success('Payment successful')
                 navigate('/myorders')
             }else{
+                toast.error('Payment failed')
                 navigate('/')
             }
         } catch (error) {
-            
+            toast.error('Something went wrong')
+            console.log(error);
         }
     }
 
