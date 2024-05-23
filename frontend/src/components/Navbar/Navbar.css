@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 1rem  ;
+    padding: .5rem 2rem  ;
      position: relative;
     margin: 1.3rem  auto 0 auto;
     background-color: rgba(255, 255, 255, 0.8);
@@ -42,7 +42,7 @@
 
 .nav-right>svg{
     color: #0A4354;
-    font-size: 18px;
+    font-size: 25px;
 
 }
 
@@ -104,6 +104,56 @@
     border-radius: 8px;
     font-size: 15px;
     transition: all 0.3s ease-in-out;
+}
+
+
+.user-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+
+}
+.user-container .user-icon{
+    font-size: 25px;
+    color: #0A4354;
+
+}
+
+
+
+.user-container .user-dropdown{
+  
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 200%;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    gap: .5rem;
+    padding: .5rem 1.5rem 1rem 1.5rem;
+}
+.user-dropdown-active{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 200%;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    gap: .5rem;
+    padding: .5rem 1.5rem 1rem 1.5rem;
+   
+}
+
+
+.user-container  .user-dropdown-item{
+   
+    color: #0A4354;
+    font-size: 16px;
+    cursor: pointer;
+
 }
 @media screen and (max-width:1075px) {
     .notification-dot{

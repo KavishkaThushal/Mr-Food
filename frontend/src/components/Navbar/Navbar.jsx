@@ -6,12 +6,38 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/storeContext';
+import { FaUser } from "react-icons/fa";
+
+
 function Navbar({setSignPopUp}) {
   const [menu,setMenu] = useState('')
   const [menuShow,setMenuShow] = useState(false)
+  const [userShow,setUserShow] = useState(false)
   const navigate=useNavigate()
   const {cardItems}=useContext(StoreContext)
-  console.log(cardItems);
+  const token=localStorage.getItem('token')
+
+  const logout=()=>{
+    localStorage.removeItem('token')
+    navigate('/')
+   }
+
+   const loginComponent=()=>{
+    return(
+      <div onClick={()=>(setUserShow(!userShow))} className='user-container'>
+      <FaUser className='user-icon'/>
+      <div className={userShow? 'user-dropdown-active':'user-dropdown'}>
+        
+        <Link to='/orders' className='user-dropdown-item'>Orders</Link>
+        <p  className='user-dropdown-item' onClick={logout}>Logout</p>
+      </div>
+      </div>
+    )
+   }
+
+
+ 
+
   return (
    <div className='nav-bar'>
     <img src={Logo} alt='logo' className='logo' />
@@ -30,7 +56,7 @@ function Navbar({setSignPopUp}) {
      <FiSearch  /> 
      <FiShoppingCart onClick={()=>(navigate('/cart'))} /> 
      {Object.values(cardItems).map((value,i)=>(value>0? <div className='notification-dot'/>:null))}
-     <button onClick={()=>(setSignPopUp(true))} className='sign-btn'>SIGN IN</button>
+     {!token? <button onClick={()=>(setSignPopUp(true))} className='sign-btn'>SIGN IN</button>:loginComponent()}
      <RxHamburgerMenu className='menu-icon' onClick={()=>(setMenuShow(!menuShow))}/>
     </div>
 

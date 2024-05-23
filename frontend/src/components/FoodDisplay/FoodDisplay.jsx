@@ -11,7 +11,7 @@ function FoodDisplay({category}) {
       
         </div>
         <div className='food-list-display'>
-            {foodList.map((food,i)=>{
+            {foodList?.map((food,i)=>{
                 if(category === "All" || category === food.category){
                     return(
                         <FoodItem key={i} id={food._id} name={food.name} description={food.description} price={food.price} image={food.image}/>

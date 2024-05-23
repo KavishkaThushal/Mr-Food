@@ -8,7 +8,7 @@ function FoodItem({id,name,description,price,image}) {
   return (
     <div className='food-card'>
         <div className='food-img'>
-            <img src={image} alt={name}/>
+            <img src={`http://localhost:7001/images/${image}`} alt={name}/>
         </div>
         <div className='food-content'>
             <h3>{name}</h3>
