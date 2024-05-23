@@ -14,7 +14,7 @@ function SignPopUp({setSignPopUp}) {
         setFormData((prev)=>({...prev,[e.target.name]:e.target.value}))
       }
 
-      const handlesubmit=async(e)=>{
+      const handleRegister=async(e)=>{
         e.preventDefault()
         try {
             const response = await axios.post('http://localhost:7001/api/user/register',{
@@ -25,6 +25,29 @@ function SignPopUp({setSignPopUp}) {
             })
             if(response.data.success===true){
                 toast.success('Account created successfully')
+                setToken(response.data.token)
+                setSignPopUp(false)
+                localStorage.setItem('token',response.data.token)
+            }else{
+                toast.error(response.data.message)
+            }
+        } catch (error) {
+            toast.error(response.data.message)
+        }
+      }
+
+
+      const handleLogin=async(e)=>{
+        e.preventDefault()
+        try {
+            const response = await axios.post('http://localhost:7001/api/user/login',{
+               
+                email:formData.email,
+                password:formData.password
+
+            })
+            if(response.data.success===true){
+                toast.success('Login successfully')
                 setToken(response.data.token)
                 setSignPopUp(false)
                 localStorage.setItem('token',response.data.token)
@@ -53,7 +76,7 @@ function SignPopUp({setSignPopUp}) {
             <label>Password</label>
             <input type='password' placeholder='Password' name='password' onChange={handleChange} required/>
         </span>
-        {accontUserState==='sign-in'?<button className='popup-sign-btn'>Sign in</button>:<button className='popup-sign-btn' onClick={handlesubmit}>Create an account</button>}
+        {accontUserState==='sign-in'?<button className='popup-sign-btn' onClick={handleLogin}>Sign in</button>:<button className='popup-sign-btn' onClick={handleRegister}>Create an account</button>}
         <Oath/>
         {accontUserState==='sign-in'?<p>create an account? <button className='here' onClick={()=>(setAccountUserState('sign-up'))}>Click here</button></p>:<p>already have an account? <button className='here' onClick={()=>(setAccountUserState('sign-in'))}>Login here</button></p>}
         

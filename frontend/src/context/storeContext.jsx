@@ -41,6 +41,7 @@ const getTotalAmount=()=>{
     
     useEffect(() => {
         console.log(cardItems);
+        console.log(Token);
         
     }, [cardItems])
     return (
