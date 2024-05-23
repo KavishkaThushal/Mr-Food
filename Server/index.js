@@ -6,6 +6,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { FoodRoute } from './Routes/food.js';
 import { userRouter } from './Routes/user.js';
+import { CartRoute } from './Routes/cart.js';
 
 dotenv.config();
 const app = express();
@@ -26,6 +27,7 @@ const port=process.env.PORT || 3000
 //routes
 app.use('/api/food',FoodRoute)
 app.use('/api/user',userRouter)
+app.use('/api/cart',CartRoute)
 app.use('/images',express.static('uploads'))
 
 app.listen(port,()=>{

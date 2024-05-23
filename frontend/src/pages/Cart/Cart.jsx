@@ -25,7 +25,7 @@ function Cart() {
                     return(
                         <div key={i}>
                             <div className='cart-content'>
-                            <img src={item.image} alt={item.name} />
+                            <img src={`http://localhost:7001/images/${item.image}`} alt={item.name} />
                             <p>{item.name}</p>
                             <p>Rs.{item.price}.00</p>
                             <p>{cardItems[item._id]}</p>

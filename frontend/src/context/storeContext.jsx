@@ -7,7 +7,18 @@ const StoreProvider = (props) => {
 const [cardItems, setCardItems] = useState({})
 const [foodList, setFoodList] = useState([])
 const [Token, setToken] = useState('')
-  
+ const token=localStorage.getItem('token') 
+
+ const loadCartItems=async()=>{
+    const response=await axios.get('http://localhost:7001/api/cart/show-cart'
+    ,{
+        headers:{
+            authorization:token
+        }
+    })
+    setCardItems(response.data.data)
+}
+
 useEffect(() => {
     const fetchFoodList = async () => {
         try {
@@ -23,7 +34,7 @@ useEffect(() => {
        
     }
     fetchFoodList()
-    
+    loadCartItems()
     
 }, [])
 
@@ -33,10 +44,44 @@ useEffect(() => {
   } else{
       setCardItems(prev=>({...prev,[itmeId]:prev[itmeId]+1}))
   }
+
+  if(token){
+  
+    try {
+        axios.post('http://localhost:7001/api/cart/add-item',{
+        itemId:itmeId,
+    },{
+        headers:{
+            authorization:token
+        }
+    })
+    } catch (error) {
+        console.log(error);
+    }
+    
+  }
 }
+
+
 
 const removeFromCart = (itmeId) => {
     setCardItems(prev=>({...prev,[itmeId]:prev[itmeId]-1}))
+
+    if(token){
+  
+        try {
+            axios.post('http://localhost:7001/api/cart/remove-item',{
+            itemId:itmeId,
+        },{
+            headers:{
+                authorization:token
+            }
+        })
+        } catch (error) {
+            console.log(error);
+        }
+        
+      }
 }
 const getTotalAmount=()=>{
     let total=0;
