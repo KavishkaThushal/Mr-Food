@@ -95,3 +95,70 @@
     width: max(20%, 100px);
 }
 
+@media screen and (max-width: 925px) {
+    .Add-container{
+       
+        width: 70%;
+        
+    
+    }
+    .Add-container .last-row .price-container input{
+       
+        max-width: 120px;
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    .Add-container{
+       
+        width: 80%;
+        margin: 2rem 1rem;
+    
+    }
+    .Add-container .last-row .price-container input{
+       
+        max-width: 80px;
+    }	
+    
+}
+
+@media screen and (max-width: 700px) {
+    .Add-container{
+       
+        width: 90%;
+        margin: 2rem 1rem;
+    
+    
+    }
+    .Add-container .last-row .price-container input{
+       
+        max-width: 60px;
+    }
+    
+    .Add-container .add-btn{
+       
+        padding: .4rem .6rem;
+        
+    }
+    .Add-container .last-row{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .Add-container .last-row .price-container input{
+       
+        max-width: 150px;
+    }
+    
+    .Add-container .product-name input{
+        padding: .3rem .6rem;
+        
+    }
+    
+   
+    
+    .Add-container .text-field textarea{
+        padding: .3rem .6rem;
+        
+    }
+}

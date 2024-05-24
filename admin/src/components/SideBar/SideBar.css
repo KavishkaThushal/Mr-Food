@@ -60,11 +60,9 @@
  }
 
  @media screen and (max-width: 768px) {
-    .sidebar-container{
-        width: 30%;
-    }
+    
     .sidebar-container .options .option h3{
-        font-size: .8rem;
+        font-size: .6rem;
         
     }
     .sidebar-container .options .option svg{

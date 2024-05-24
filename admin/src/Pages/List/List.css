@@ -37,3 +37,17 @@
     cursor: pointer;
     font-weight: 500;
 }
+
+@media screen and (max-width: 768px) {
+   
+    .food-list-items img{
+        width: 30px;
+    }
+    .list-container .list-title h3{
+        font-size: .8rem;
+    }
+    .food-list-items h3{
+        font-size: .7rem;
+    }
+    
+}
