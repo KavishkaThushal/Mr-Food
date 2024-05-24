@@ -28,7 +28,7 @@ function Navbar({setSignPopUp}) {
       <FaUser className='user-icon'/>
       <div className={userShow? 'user-dropdown-active':'user-dropdown'}>
         
-        <Link to='/orders' className='user-dropdown-item'>Orders</Link>
+        <Link to='/myorders' className='user-dropdown-item'>Orders</Link>
         <p  className='user-dropdown-item' onClick={logout}>Logout</p>
       </div>
       </div>

@@ -10,6 +10,7 @@ import Order from './pages/Order/Order'
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify/Verify'
+import MyOrders from './pages/MyOrders/MyOrders'
 
 function App() {
   const [signPopUp,setSignPopUp] = useState(false)
@@ -25,6 +26,7 @@ function App() {
         <Route path="/cart" element={<Cart/>} />
         <Route path="/order" element={<Order/>} />
         <Route path="/verify" element={<Verify/>} />
+        <Route path="/myorders" element={<MyOrders/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

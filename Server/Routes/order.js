@@ -6,6 +6,6 @@ const router=express.Router();
 
 router.post('/place-order',verifyToken,placeOrder)
 router.post('/order-verify',verifyOrder)
-router.post('/myorders',verifyToken,showOrders)
+router.get('/myorders',verifyToken,showOrders)
 
 export {router as orderRouter}

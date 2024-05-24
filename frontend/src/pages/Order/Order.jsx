@@ -1,10 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Order.css'
 import { StoreContext } from '../../context/storeContext'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 function Order() {
     const {foodList,cardItems,getTotalAmount}=useContext(StoreContext)
-    
+    const token=localStorage.getItem('token')
+    const navigate=useNavigate()
     const totalAmount=getTotalAmount()
     const [formData,setFormData]=useState({
         firstName:"",
@@ -58,6 +60,18 @@ function Order() {
         }
        
     }
+
+    useEffect(() => {
+      return () => {
+        effect
+      };
+    }, [input]);(()=>{
+            if(!token){
+               navigate('/cart')
+            }else if(totalAmount===0){
+                navigate('/cart')
+            }
+    },[token])
            
   return (
     <form onSubmit={placeOrder} className='order-section'>
