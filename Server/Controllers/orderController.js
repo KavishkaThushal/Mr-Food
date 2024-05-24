@@ -77,3 +77,21 @@ export const showOrders=async(req,res)=>{
         res.status(500).json({message:error.message,success:false})
     }
 }
+
+export const showAllOrders=async(req,res)=>{
+    try {
+        const allOrders=await Order.find({})
+        res.status(200).json({success:true,data:allOrders})
+    } catch (error) {
+        res.satatus(500).json({message:error.message,success:false})
+    }
+}
+
+export const updateStatus=async(req,res)=>{
+    try {
+        const response=await Order.findByIdAndUpdate(req.params.id,{status:req.body.status})
+        res.status(200).json({success:true,data:response})
+    } catch (error) {
+        res.satatus(500).json({message:error.message,success:false})
+    }
+}

@@ -13,7 +13,7 @@ function FoodItem({id,name,description,price,image}) {
         <div className='food-content'>
             <h3>{name}</h3>
             <p>{description}</p>
-            <h4>${price}</h4>
+            <h4>Rs.{price}.00</h4>
             
         </div>
         <span className='plus-container'>

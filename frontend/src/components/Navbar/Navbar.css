@@ -14,14 +14,24 @@
 .logo{
     width: 68px;
 }
+
+.cart-icon-container{
+    position: relative;
+    cursor: pointer;
+    color: #0A4354;
+    display: flex;
+
+    font-size: 25px;
+
+}
 .notification-dot{
     position: absolute;
     width: 8px;
     height: 8px;
     border-radius:4rem;
     background-color: red;
-    top: 30%;
-    right: 9.5%;
+    top: -15%;
+   right: -3%;
 }
 
 .nav-menu{
@@ -39,6 +49,7 @@
     gap: 1rem;
     align-items: center;
 }
+
 
 .nav-right>svg{
     color: #0A4354;
@@ -155,34 +166,9 @@
     cursor: pointer;
 
 }
-@media screen and (max-width:1075px) {
-    .notification-dot{
-       
-        top: 30%;
-        right: 12%;
-    }
-}
-@media screen and (max-width:1013px) {
-    .notification-dot{
-       
-        top: 30%;
-        right: 12.5%;
-    }
-}
-@media screen and (max-width:955px) {
-    .notification-dot{
-       
-        top: 30%;
-        right: 13%;
-    }
-}
-@media screen and (max-width:811px) {
-    .notification-dot{
-       
-        top: 30%;
-        right: 16%;
-    }
-}
+
+
+
 
 @media screen and (max-width: 768px){
     .logo{
@@ -202,39 +188,17 @@
     .nav-bar{
         justify-content: space-between;
     }
-    .notification-dot{
-       
-        top: 29%;
-        right: 6%;
-    }
+    
     
 }
 
-@media screen and (max-width:600px){
-    .notification-dot{
-       
-        top: 29%;
-        right: 7%;
-    }
-}
+
 
 @media screen and (max-width: 430px){
     .logo{
         width: 50px;
         
     }
-    .notification-dot{
-       
-        top: 28%;
-        right: 9.5%;
-    }
+   
 }
 
-@media screen and (max-width: 335px){
-    .notification-dot{
-       
-        top: 28%;
-        right: 12%;
-    }
-    
-}

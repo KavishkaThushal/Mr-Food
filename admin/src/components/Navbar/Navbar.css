@@ -16,3 +16,61 @@
     color: #0A4354;
     margin-left: 1rem;
 }
+
+
+@media screen and (max-width: 768px) {
+    .nav-container{
+        padding: .3rem 2rem;
+    }
+    .nav-container h1{
+        font-size: 2rem;
+    }
+    .nav-container .logo,.profile-img{
+        width: max(6%, 40px);
+    }
+    
+}
+
+@media screen and (max-width: 595px) {
+    .nav-container{
+        padding: .3rem 2rem;
+    }
+    .nav-container h1{
+        font-size: 1.8rem;
+    }
+    .nav-container .logo,.profile-img{
+        width: max(6%, 40px);
+    }
+    
+}
+@media screen and (max-width: 4000px){
+    .nav-container h1{
+        font-size: 1.3rem;
+    }
+}
+
+@media  screen and (max-width: 360px) {
+    .nav-container h1{
+        font-size: 1.5rem;
+    }
+    .nav-container{
+        padding: .3rem 1rem;
+    }
+    .nav-container .logo,.profile-img{
+        width: max(6%, 30px);
+    }
+    
+}
+@media  screen and (max-width: 300px) {
+    .nav-container h1{
+        font-size: 1rem;
+    }
+    .nav-container{
+        padding: .3rem 1rem;
+    }
+    .nav-container .logo,.profile-img{
+        width: max(6%, 30px);
+    }
+    
+}
+

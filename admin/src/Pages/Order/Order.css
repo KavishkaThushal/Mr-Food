@@ -1,0 +1,135 @@
+.order-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 3rem auto;
+
+}
+.order-container h2{
+    
+    margin-bottom: 1rem;
+
+}
+
+.order-container  .order{
+    border: 1px solid #ccc;
+    padding: .5rem 1rem;
+ display: grid;
+    grid-template-columns: .3fr 2fr .5fr 1.2fr 1fr ;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.box{
+    width: 80px;
+   
+}
+
+.order-user-details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: .9rem;
+
+   
+}
+.order-user-details :nth-child(1){
+    padding-bottom: .5rem;
+    font-size: .8rem;
+}
+
+.order p{
+    font-size: .9rem;
+}
+.order-status{
+    padding: .3rem 1rem;
+    background-color: rgba(10, 67, 84,0.7);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+
+@media screen and (max-width: 1030px) {
+    .order-container{
+        width: 90%;
+        margin: 2rem .5rem;
+    }
+    .order-container  .order{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    }
+    .order-user-details{
+        font-size: .8rem;
+    }
+    .order p{
+        font-size: .8rem;
+    }
+    .order-status{
+        padding: .2rem .5rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .order-container{
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .order-container  .order{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    }
+    .order-user-details{
+        font-size: .5rem;
+    }
+    .order p{
+        font-size: .5rem;
+    }
+    .order-status{
+        padding: .2rem .5rem;
+    }
+    
+    .order-status{
+        padding: .3rem .5rem;
+        font-size: .7rem;
+       
+    }
+}
+@media screen and (max-width: 595px) {
+    
+    .box{
+        width: 50px;
+       
+    }
+    .order-container  .order{
+       
+        padding: .2rem .5rem;
+    
+        gap: .5rem;
+    }
+    .order-container h2{
+    
+       font-size: 1rem;
+    
+    }
+}
+
+@media screen and (max-width: 520px){
+    .order-container  .order{
+        border: 1px solid #ccc;
+        padding: .5rem 1rem;
+     display: flex;
+       flex-direction: column;
+        align-items: start;
+        justify-items: center;
+        gap: 1rem;
+    }
+    .order-container{
+        
+        width: 60%;
+        margin: 3rem auto;
+    
+    }
+    
+}

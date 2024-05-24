@@ -54,8 +54,11 @@ function Navbar({setSignPopUp}) {
     <div className='nav-right'>
     
      <FiSearch  /> 
-     <FiShoppingCart onClick={()=>(navigate('/cart'))} /> 
+      <span className='cart-icon-container'>
+     <FiShoppingCart onClick={()=>(navigate('/cart'))} />
      {Object.values(cardItems).map((value,i)=>(value>0? <div className='notification-dot'/>:null))}
+     </span>
+     
      {!token? <button onClick={()=>(setSignPopUp(true))} className='sign-btn'>SIGN IN</button>:loginComponent()}
      <RxHamburgerMenu className='menu-icon' onClick={()=>(setMenuShow(!menuShow))}/>
     </div>

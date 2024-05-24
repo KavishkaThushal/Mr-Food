@@ -66,7 +66,7 @@ function Add() {
             <option value='Salad'>Salad</option>
             <option value='Rolls'>Rolls</option>
             <option value='Deserts'>Deserts</option>
-            <option value='Sandwich'>SandwiCakech</option>
+            <option value='Sandwich'>Sandwitch</option>
             <option value='Cake'>Cake</option>
             <option value='Pure Veg'>Pure Veg</option>
             <option value='Pasta'>Pasta</option>
@@ -78,7 +78,7 @@ function Add() {
 
         <span className='price-container'>
           <label>Product Price</label>
-          <input type='number' name='price' onChange={handleChange} required placeholder='$' value={formData.price} />
+          <input type='number' name='price' onChange={handleChange} required placeholder='Rs' value={formData.price} />
         </span>
       </span>
       <button onClick={handleSubmit} className='add-btn'>Add Product</button>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import './SignPopUp.css'
 import { IoClose } from "react-icons/io5"
-import Oath from '../Oath/Oath'
+
 import {toast} from 'react-toastify'
 import axios from 'axios'
 import { StoreContext } from '../../context/storeContext'
@@ -77,7 +77,7 @@ function SignPopUp({setSignPopUp}) {
             <input type='password' placeholder='Password' name='password' onChange={handleChange} required/>
         </span>
         {accontUserState==='sign-in'?<button className='popup-sign-btn' onClick={handleLogin}>Sign in</button>:<button className='popup-sign-btn' onClick={handleRegister}>Create an account</button>}
-        <Oath/>
+        
         {accontUserState==='sign-in'?<p>create an account? <button className='here' onClick={()=>(setAccountUserState('sign-up'))}>Click here</button></p>:<p>already have an account? <button className='here' onClick={()=>(setAccountUserState('sign-in'))}>Login here</button></p>}
         
         

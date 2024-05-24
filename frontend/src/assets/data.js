@@ -10,7 +10,7 @@ import sandwitch from '../assets/sandwitch.jpg';
 
 export const menuImg=[
 {
-   name:'Ice-cream',
+   name:'Deserts',
    img:img1
 },
 {
@@ -18,7 +18,7 @@ export const menuImg=[
    img:pasta
 },
 {
-   name:'Veg',
+   name:'Pure Veg',
    img:vegitable
 },
 {
@@ -30,7 +30,7 @@ export const menuImg=[
    img:rolls
 },
 {
-   name:'Sandwitch',
+   name:'Sandwich',
    img:sandwitch
 },
 {
