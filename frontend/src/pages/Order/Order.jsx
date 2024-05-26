@@ -61,11 +61,7 @@ function Order() {
        
     }
 
-    useEffect(() => {
-      return () => {
-        effect
-      };
-    }, [input]);(()=>{
+    useEffect(()=>{
             if(!token){
                navigate('/cart')
             }else if(totalAmount===0){

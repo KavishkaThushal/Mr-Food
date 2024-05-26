@@ -44,3 +44,58 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 800px) {
+    .myorder-container{
+        width: 90%;
+    }
+    .myorder-container .myorder img{
+        width: 80px;
+    }
+    .order p{
+        font-size: .8rem;
+       
+       
+    }
+    .order button{
+        
+        padding: .3rem .7rem;
+       
+    }
+    
+    
+}
+@media screen and (max-width: 600px) {
+    
+    .myorder-container .myorder img{
+        width: 60px;
+    }
+    .order p{
+        font-size: .6rem;
+       
+       
+    }
+    .order button{
+        
+        padding: .2rem .5rem;
+        font-size: .6rem;
+       
+    }
+    
+    
+}
+@media screen and (max-width: 490px){
+    .myorder-container{
+        width: 60%;
+        align-items: center;
+    }
+    .myorder-container .myorder img{
+       display: none;
+    }
+    .order{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
